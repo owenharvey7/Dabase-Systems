@@ -17,7 +17,7 @@ This is a Repository for C442 Database Systems
 
 ### Languages
 
-- Python
+- Python (Done in MySQL Workbench)
 - SQL
 - XML
 - JSON
