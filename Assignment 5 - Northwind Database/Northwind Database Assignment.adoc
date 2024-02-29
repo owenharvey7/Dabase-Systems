@@ -1,0 +1,39 @@
+= SQL: Querying The Northwind Database
+
+== Summary
+
+In this assignment, we will write some more interesting queries using the techniques in Chapter 7. To do this, we are going to use a popular sample database known as the Northwind database. 
+
+The Northwind database models a company named Northwind that has employees, inventory, products, and external customers. The database records the transactions between those customers and Northwind.
+
+Here's a summary of the database:
+
+[caption="Northwind Schema"]
+image::https://github.com/pthom/northwind_psql/raw/master/ER.png[Schema]
+
+== Getting the database
+
+While Northwind was originally a sample database in Microsoft products, it has been ported to many popular database systems. We will use a GitHub project that translated the database for use in Postgres.
+
+https://github.com/pthom/northwind_psql[Northwind sample database for postgres]
+
+You must import the data into your Postgres instance by creating a new database and running the `northwind.sql` file against that database.
+
+You may simply run the `create_db.sh` script on MacOS, Linux, or WSL/bash. Without a bash shell available, you must use the techniques from previous SQL assignments to manage your database. Note that for our purposes, some of the commands in the script are not completely necessary.
+
+== What do do
+
+Write SQL queries for the following questions, stored in a `.sql` file to be turned in:
+
+. What is the full name, full address, title, and phone number for all employees currently living in a US state that shares a border with the Pacific Ocean?
+. Give the same information for all employees not in the USA but are older than 50 years of age.
+. Which employees (last name, first name without repeats) have placed orders delivered to Norway?
+. What is the title and name of any employee that has sold at least two of either "Vegie-spread" or "Sir Rodney's Marmalade"?
+. What are the Employee IDs for all employees who have sold more than 70 products?
+. List the last name of all employees that live on the same city as their managers.
+. List the product names of all products that were bought OR sold by people who live in London (use a `UNION`).
+. What is the average price of products for each category? Output just the average price as "average_price" and the category ID.
+
+== What to turn in
+
+Turn in a file named `hw5.sql` to this repository. Be sure you have committed and pushed the file. It should only have the previous eight queries and no database setup commands. Your file must run cleanly without errors. No points will be awarded for a script that does not execute.
